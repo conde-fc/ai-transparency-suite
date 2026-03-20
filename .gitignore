@@ -1,0 +1,39 @@
+# HAR files (contain session tokens and PII)
+*.har
+
+# Environment
+.env
+.env.*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node (if any)
+node_modules/
+
+# Database
+*.sqlite
+*.db
+
+# Output directories (user-generated)
+/output/
+/captures/
+
+# Archives
+.archive/

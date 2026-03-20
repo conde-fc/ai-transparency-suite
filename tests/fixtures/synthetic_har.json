@@ -1,0 +1,340 @@
+{
+  "log": {
+    "version": "1.2",
+    "creator": {
+      "name": "ATS Synthetic Generator",
+      "version": "1.0"
+    },
+    "entries": [
+      {
+        "startedDateTime": "2026-01-15T10:00:00.000Z",
+        "time": 150,
+        "request": {
+          "method": "POST",
+          "url": "https://example-ai-platform.com/api/chat/completions",
+          "httpVersion": "HTTP/2.0",
+          "headers": [
+            {"name": "Content-Type", "value": "application/json"},
+            {"name": "Authorization", "value": "Bearer SYNTHETIC_TOKEN_12345"}
+          ],
+          "queryString": [],
+          "cookies": [
+            {"name": "session_id", "value": "SYNTHETIC_SESSION_abc123"}
+          ],
+          "headersSize": -1,
+          "bodySize": 256,
+          "postData": {
+            "mimeType": "application/json",
+            "text": "{\"model\": \"synthetic-model-v1\", \"messages\": [{\"role\": \"user\", \"content\": \"SYNTHETIC: What is the weather?\"}], \"stream\": true}"
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "httpVersion": "HTTP/2.0",
+          "headers": [
+            {"name": "Content-Type", "value": "application/json"}
+          ],
+          "cookies": [],
+          "content": {
+            "size": 512,
+            "mimeType": "application/json",
+            "text": "{\"id\": \"SYNTHETIC_resp_001\", \"choices\": [{\"message\": {\"content\": \"SYNTHETIC: I cannot check the weather.\"}}]}"
+          },
+          "redirectURL": "",
+          "headersSize": -1,
+          "bodySize": 512
+        },
+        "cache": {},
+        "timings": {
+          "send": 1,
+          "wait": 140,
+          "receive": 9
+        }
+      },
+      {
+        "startedDateTime": "2026-01-15T10:00:00.100Z",
+        "time": 50,
+        "request": {
+          "method": "POST",
+          "url": "https://api.segment.io/v1/track",
+          "httpVersion": "HTTP/2.0",
+          "headers": [
+            {"name": "Content-Type", "value": "application/json"}
+          ],
+          "queryString": [],
+          "cookies": [],
+          "headersSize": -1,
+          "bodySize": 384,
+          "postData": {
+            "mimeType": "application/json",
+            "text": "{\"anonymousId\": \"SYNTHETIC_anon_456\", \"event\": \"Chat Message Sent\", \"properties\": {\"model\": \"synthetic-model-v1\", \"message_length\": 25, \"session_duration\": 120}, \"timestamp\": \"2026-01-15T10:00:00.100Z\"}"
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "httpVersion": "HTTP/2.0",
+          "headers": [],
+          "cookies": [],
+          "content": {
+            "size": 2,
+            "mimeType": "application/json",
+            "text": "{}"
+          },
+          "redirectURL": "",
+          "headersSize": -1,
+          "bodySize": 2
+        },
+        "cache": {},
+        "timings": {
+          "send": 1,
+          "wait": 45,
+          "receive": 4
+        }
+      },
+      {
+        "startedDateTime": "2026-01-15T10:00:00.200Z",
+        "time": 30,
+        "request": {
+          "method": "POST",
+          "url": "https://api2.amplitude.com/2/httpapi",
+          "httpVersion": "HTTP/2.0",
+          "headers": [
+            {"name": "Content-Type", "value": "application/json"}
+          ],
+          "queryString": [],
+          "cookies": [],
+          "headersSize": -1,
+          "bodySize": 512,
+          "postData": {
+            "mimeType": "application/json",
+            "text": "{\"api_key\": \"SYNTHETIC_KEY\", \"events\": [{\"event_type\": \"page_view\", \"user_id\": \"SYNTHETIC_user_789\", \"device_id\": \"SYNTHETIC_device_012\", \"event_properties\": {\"page\": \"/chat\", \"referrer\": \"direct\"}, \"user_properties\": {\"plan\": \"free\", \"signup_date\": \"2025-06-01\"}}]}"
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "httpVersion": "HTTP/2.0",
+          "headers": [],
+          "cookies": [],
+          "content": {
+            "size": 25,
+            "mimeType": "application/json",
+            "text": "{\"code\": 200, \"events_ingested\": 1}"
+          },
+          "redirectURL": "",
+          "headersSize": -1,
+          "bodySize": 25
+        },
+        "cache": {},
+        "timings": {
+          "send": 1,
+          "wait": 25,
+          "receive": 4
+        }
+      },
+      {
+        "startedDateTime": "2026-01-15T10:00:00.300Z",
+        "time": 20,
+        "request": {
+          "method": "POST",
+          "url": "https://featuregates.org/v1/initialize",
+          "httpVersion": "HTTP/2.0",
+          "headers": [
+            {"name": "Content-Type", "value": "application/json"}
+          ],
+          "queryString": [],
+          "cookies": [],
+          "headersSize": -1,
+          "bodySize": 256,
+          "postData": {
+            "mimeType": "application/json",
+            "text": "{\"user\": {\"userID\": \"SYNTHETIC_user_789\"}, \"statsigMetadata\": {\"sdkType\": \"js-client\", \"sdkVersion\": \"4.0.0\"}}"
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "httpVersion": "HTTP/2.0",
+          "headers": [],
+          "cookies": [],
+          "content": {
+            "size": 1024,
+            "mimeType": "application/json",
+            "text": "{\"feature_gates\": {\"enable_new_chat_ui\": {\"value\": true, \"rule_id\": \"SYNTHETIC_rule_A\"}, \"enable_voice_mode\": {\"value\": false, \"rule_id\": \"SYNTHETIC_rule_B\"}}, \"dynamic_configs\": {\"chat_experiment_v2\": {\"value\": {\"variant\": \"treatment\", \"show_suggestions\": true}, \"rule_id\": \"SYNTHETIC_exp_001\"}}, \"has_updates\": true}"
+          },
+          "redirectURL": "",
+          "headersSize": -1,
+          "bodySize": 1024
+        },
+        "cache": {},
+        "timings": {
+          "send": 1,
+          "wait": 15,
+          "receive": 4
+        }
+      },
+      {
+        "startedDateTime": "2026-01-15T10:00:00.400Z",
+        "time": 80,
+        "request": {
+          "method": "GET",
+          "url": "https://example-ai-platform.com/api/user/settings",
+          "httpVersion": "HTTP/2.0",
+          "headers": [
+            {"name": "Authorization", "value": "Bearer SYNTHETIC_TOKEN_12345"}
+          ],
+          "queryString": [],
+          "cookies": [
+            {"name": "session_id", "value": "SYNTHETIC_SESSION_abc123"}
+          ],
+          "headersSize": -1,
+          "bodySize": 0
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "httpVersion": "HTTP/2.0",
+          "headers": [
+            {"name": "Content-Type", "value": "application/json"}
+          ],
+          "cookies": [],
+          "content": {
+            "size": 256,
+            "mimeType": "application/json",
+            "text": "{\"user\": {\"email\": \"synthetic_user@example.com\", \"name\": \"SYNTHETIC User\", \"uuid\": \"550e8400-e29b-41d4-a716-446655440000\", \"plan\": \"free\"}}"
+          },
+          "redirectURL": "",
+          "headersSize": -1,
+          "bodySize": 256
+        },
+        "cache": {},
+        "timings": {
+          "send": 1,
+          "wait": 70,
+          "receive": 9
+        }
+      },
+      {
+        "startedDateTime": "2026-01-15T10:00:00.500Z",
+        "time": 25,
+        "request": {
+          "method": "GET",
+          "url": "https://cdn.example-ai-platform.com/assets/main.js",
+          "httpVersion": "HTTP/2.0",
+          "headers": [],
+          "queryString": [],
+          "cookies": [],
+          "headersSize": -1,
+          "bodySize": 0
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "httpVersion": "HTTP/2.0",
+          "headers": [
+            {"name": "Content-Type", "value": "application/javascript"}
+          ],
+          "cookies": [],
+          "content": {
+            "size": 50000,
+            "mimeType": "application/javascript",
+            "text": "/* SYNTHETIC: minified JS bundle */"
+          },
+          "redirectURL": "",
+          "headersSize": -1,
+          "bodySize": 50000
+        },
+        "cache": {},
+        "timings": {
+          "send": 1,
+          "wait": 20,
+          "receive": 4
+        }
+      },
+      {
+        "startedDateTime": "2026-01-15T10:00:01.000Z",
+        "time": 35,
+        "request": {
+          "method": "POST",
+          "url": "https://api.segment.io/v1/identify",
+          "httpVersion": "HTTP/2.0",
+          "headers": [
+            {"name": "Content-Type", "value": "application/json"}
+          ],
+          "queryString": [],
+          "cookies": [],
+          "headersSize": -1,
+          "bodySize": 256,
+          "postData": {
+            "mimeType": "application/json",
+            "text": "{\"userId\": \"SYNTHETIC_user_789\", \"traits\": {\"email\": \"synthetic_user@example.com\", \"name\": \"SYNTHETIC User\", \"plan\": \"free\", \"created_at\": \"2025-06-01T00:00:00Z\"}}"
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "httpVersion": "HTTP/2.0",
+          "headers": [],
+          "cookies": [],
+          "content": {
+            "size": 2,
+            "mimeType": "application/json",
+            "text": "{}"
+          },
+          "redirectURL": "",
+          "headersSize": -1,
+          "bodySize": 2
+        },
+        "cache": {},
+        "timings": {
+          "send": 1,
+          "wait": 30,
+          "receive": 4
+        }
+      },
+      {
+        "startedDateTime": "2026-01-15T10:00:01.500Z",
+        "time": 45,
+        "request": {
+          "method": "POST",
+          "url": "https://example-ai-platform.com/api/telemetry/events",
+          "httpVersion": "HTTP/2.0",
+          "headers": [
+            {"name": "Content-Type", "value": "application/json"}
+          ],
+          "queryString": [],
+          "cookies": [],
+          "headersSize": -1,
+          "bodySize": 512,
+          "postData": {
+            "mimeType": "application/json",
+            "text": "{\"events\": [{\"type\": \"interaction\", \"data\": {\"action\": \"message_sent\", \"model\": \"synthetic-model-v1\", \"response_time_ms\": 150, \"ip_address\": \"192.168.1.100\", \"user_agent\": \"Mozilla/5.0 SYNTHETIC\"}}]}"
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "httpVersion": "HTTP/2.0",
+          "headers": [],
+          "cookies": [],
+          "content": {
+            "size": 15,
+            "mimeType": "application/json",
+            "text": "{\"status\": \"ok\"}"
+          },
+          "redirectURL": "",
+          "headersSize": -1,
+          "bodySize": 15
+        },
+        "cache": {},
+        "timings": {
+          "send": 1,
+          "wait": 40,
+          "receive": 4
+        }
+      }
+    ]
+  }
+}

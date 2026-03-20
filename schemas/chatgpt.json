@@ -1,0 +1,61 @@
+{
+  "platform": "ChatGPT",
+  "company": "OpenAI",
+  "url": "chatgpt.com",
+  "first_party_domains": [
+    "chatgpt.com",
+    "chat.openai.com",
+    "api.openai.com",
+    "cdn.oaistatic.com",
+    "ab.chatgpt.com"
+  ],
+  "telemetry_domains": [
+    "featuregates.org",
+    "statsig.com",
+    "api.statsig.com",
+    "events.statsig.com",
+    "o33249.ingest.sentry.io",
+    "browser.sentry-cdn.com",
+    "sentry.io",
+    "api.segment.io",
+    "api2.amplitude.com",
+    "api.mixpanel.com",
+    "cdn.mxpnl.com"
+  ],
+  "cdn_domains": [
+    "cdn.oaistatic.com",
+    "oaidalleapiprodscus.blob.core.windows.net"
+  ],
+  "telemetry_path_patterns": [
+    "/v1/initialize",
+    "/v1/log_event",
+    "/v1/get_config",
+    "/v1/track",
+    "/v1/identify",
+    "/2/httpapi",
+    "/api/0/envelope",
+    "/rgstr"
+  ],
+  "functional_path_patterns": [
+    "/backend-api/conversation",
+    "/backend-api/models",
+    "/backend-api/accounts",
+    "/backend-api/settings",
+    "/backend-api/files"
+  ],
+  "experiment_patterns": [
+    "statsig",
+    "feature_gates",
+    "dynamic_configs",
+    "layer_configs",
+    "experiments",
+    "featuregates.org",
+    "ab.chatgpt.com"
+  ],
+  "known_telemetry_endpoints": [
+    "featuregates.org/v1/initialize",
+    "featuregates.org/v1/log_event",
+    "events.statsig.com/v1/log_event",
+    "api.statsig.com/v1/initialize"
+  ]
+}

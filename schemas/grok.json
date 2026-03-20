@@ -1,0 +1,48 @@
+{
+  "platform": "Grok",
+  "company": "xAI",
+  "url": "grok.com",
+  "first_party_domains": [
+    "grok.com",
+    "api.grok.com",
+    "x.ai"
+  ],
+  "telemetry_domains": [
+    "api.segment.io",
+    "cdn.segment.com",
+    "api2.amplitude.com",
+    "sentry.io",
+    "browser.sentry-cdn.com"
+  ],
+  "cdn_domains": [
+    "cdn.grok.com",
+    "static.grok.com"
+  ],
+  "telemetry_path_patterns": [
+    "/v1/track",
+    "/v1/identify",
+    "/v1/page",
+    "/2/httpapi",
+    "/api/0/envelope",
+    "/telemetry",
+    "/analytics"
+  ],
+  "functional_path_patterns": [
+    "/api/chat",
+    "/api/conversation",
+    "/api/models",
+    "/api/user",
+    "/rest/api"
+  ],
+  "experiment_patterns": [
+    "experiment",
+    "feature_flag",
+    "feature_gate",
+    "ab_test"
+  ],
+  "known_telemetry_endpoints": [
+    "api.segment.io/v1/track",
+    "api.segment.io/v1/identify",
+    "api2.amplitude.com/2/httpapi"
+  ]
+}

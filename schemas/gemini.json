@@ -1,0 +1,53 @@
+{
+  "platform": "Gemini",
+  "company": "Google",
+  "url": "gemini.google.com",
+  "first_party_domains": [
+    "gemini.google.com",
+    "alkalimakersuite-pa.clients6.google.com",
+    "content-alkalimakersuite-pa.googleapis.com"
+  ],
+  "telemetry_domains": [
+    "www.google-analytics.com",
+    "analytics.google.com",
+    "region1.google-analytics.com",
+    "www.googletagmanager.com",
+    "play.google.com",
+    "www.gstatic.com",
+    "accounts.google.com",
+    "ogs.google.com"
+  ],
+  "cdn_domains": [
+    "www.gstatic.com",
+    "fonts.googleapis.com",
+    "fonts.gstatic.com"
+  ],
+  "telemetry_path_patterns": [
+    "/collect",
+    "/g/collect",
+    "/gtag",
+    "/gtm.js",
+    "/analytics.js",
+    "/$rpc/google.internal",
+    "/log",
+    "/_/BardChatUi/data"
+  ],
+  "functional_path_patterns": [
+    "/$rpc/google.ai.generativelanguage",
+    "/generate",
+    "/streamGenerate",
+    "/count_tokens",
+    "/_/BardChatUi/data/assistant.lamda.BardFrontendService"
+  ],
+  "experiment_patterns": [
+    "experiment",
+    "exp_config",
+    "feature_flag",
+    "launch_config"
+  ],
+  "known_telemetry_endpoints": [
+    "www.google-analytics.com/collect",
+    "analytics.google.com/g/collect",
+    "www.googletagmanager.com/gtag"
+  ]
+}

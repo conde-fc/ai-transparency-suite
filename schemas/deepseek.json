@@ -1,0 +1,49 @@
+{
+  "platform": "DeepSeek",
+  "company": "DeepSeek",
+  "url": "chat.deepseek.com",
+  "first_party_domains": [
+    "chat.deepseek.com",
+    "api.deepseek.com",
+    "cdn.deepseek.com"
+  ],
+  "telemetry_domains": [
+    "hm.baidu.com",
+    "www.google-analytics.com",
+    "analytics.google.com",
+    "region1.google-analytics.com",
+    "www.googletagmanager.com",
+    "api.segment.io"
+  ],
+  "cdn_domains": [
+    "cdn.deepseek.com",
+    "lf-cdn.deepseek.com"
+  ],
+  "telemetry_path_patterns": [
+    "/hm.js",
+    "/hm.gif",
+    "/collect",
+    "/g/collect",
+    "/analytics",
+    "/v1/track",
+    "/v1/identify",
+    "/gtag",
+    "/events"
+  ],
+  "functional_path_patterns": [
+    "/api/v0/chat",
+    "/api/v0/models",
+    "/api/v0/user",
+    "/api/chat/completions"
+  ],
+  "experiment_patterns": [
+    "experiment",
+    "ab_test",
+    "feature_flag"
+  ],
+  "known_telemetry_endpoints": [
+    "hm.baidu.com/hm.gif",
+    "www.google-analytics.com/collect",
+    "analytics.google.com/g/collect"
+  ]
+}

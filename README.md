@@ -1,22 +1,20 @@
 # AI Transparency Suite (ATS)
 
-**Open-source forensic toolkit for analyzing undisclosed data collection by AI chat platforms.**
+**Open-source toolkit for measuring and documenting data collection by AI chat platforms.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 
 ## Why This Exists
 
-Major AI chat platforms collect significantly more data than their privacy policies disclose. Telemetry calls, undisclosed third-party analytics integrations, A/B experiment infrastructure, and persistent tracking in supposedly "private" modes are common across the industry. Consumers deserve tools to see exactly what is being collected and compare it against what platforms claim.
-
-ATS provides that capability using passive forensic analysis of HAR (HTTP Archive) files — the same network data your browser already records.
+As AI tools become part of daily workflows, understanding what happens during your sessions matters. Consumers interact with AI platforms through a browser, and everything that happens — every API call, every analytics payload, every experiment assignment — is already visible in the browser's developer tools. ATS organizes that visibility into reproducible, structured analysis. Using standard HAR (HTTP Archive) captures, it measures telemetry ratios, inventories third-party integrations, detects experiment infrastructure, and maps the relationship between observed data collection and published privacy disclosures. All findings are independently reproducible.
 
 ## What It Finds
 
-- **Telemetry ratios** — what percentage of API calls serve you vs. track you
-- **Undisclosed integrations** — third-party analytics (Segment, Amplitude, StatsIg) not mentioned in privacy policies
-- **Experiment infrastructure** — A/B tests, feature gates, and experiment configs running silently
-- **PII in "private" modes** — email addresses, UUIDs, and identifiers transmitted even in incognito/private sessions
+- **Telemetry ratios** — what percentage of API calls serve the user vs. perform analytics
+- **Observed integrations** — third-party analytics services (Segment, Amplitude, StatsIg) found in network traffic
+- **Experiment infrastructure** — A/B tests, feature gates, and experiment configs present in API responses
+- **Private mode behavior** — what data is still transmitted during incognito/private sessions
 - **Domain inventories** — every server your browser contacts during a chat session
 - **Field-level classification** — what each data field represents and its privacy sensitivity
 
@@ -65,8 +63,8 @@ python analyze/har_experiment_detector.py your_capture.har
 # Scan for PII in requests
 python analyze/har_pii_scanner.py your_capture.har
 
-# Compare normal vs incognito sessions
-python analyze/har_incognito_auditor.py normal.har incognito.har
+# Audit a capture from incognito/private mode
+python analyze/har_incognito_auditor.py incognito_capture.har
 
 # Classify all data fields
 python analyze/har_field_classifier.py your_capture.har

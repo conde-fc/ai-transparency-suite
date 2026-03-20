@@ -51,7 +51,7 @@ The GDPR provides strong data subject rights for EU/EEA residents:
 - **Article 21** — Right to object to processing
 - **Article 22** — Rights related to automated decision-making and profiling
 
-**Relevance to ATS findings:** GDPR requires that data subjects be informed of all data processing at the time of collection. Undisclosed telemetry, third-party analytics integrations, or experiment infrastructure may violate Articles 13/14. Data subject access requests (DSARs) under Article 15 can be compared against ATS analysis to identify gaps between what a platform discloses and what it actually collects.
+**Relevance to ATS findings:** GDPR requires that data subjects be informed of all data processing at the time of collection. Observed telemetry, third-party analytics integrations, or experiment infrastructure not documented in privacy disclosures may represent gaps under Articles 13/14. Data subject access requests (DSARs) under Article 15 can be compared against ATS analysis to identify gaps between what a platform discloses and what it actually collects.
 
 ### Filing a Complaint
 
@@ -62,11 +62,11 @@ EU residents can file complaints with their national Data Protection Authority (
 
 | ATS Tool | Regulatory Use |
 |----------|---------------|
-| `har_telemetry_counter` | Quantifies undisclosed data collection volume |
-| `har_domain_inventory` | Identifies undisclosed third-party data recipients |
-| `har_experiment_detector` | Documents undisclosed profiling/experimentation |
-| `har_pii_scanner` | Identifies specific PII transmitted without consent |
-| `har_incognito_auditor` | Proves tracking persists despite "private" mode claims |
+| `har_telemetry_counter` | Quantifies observed data collection volume |
+| `har_domain_inventory` | Identifies observed third-party data recipients |
+| `har_experiment_detector` | Documents observed experimentation infrastructure |
+| `har_pii_scanner` | Identifies specific PII observed in network traffic |
+| `har_incognito_auditor` | Measures tracking behavior during private mode sessions |
 | `har_field_classifier` | Catalogs all data fields for comparison against disclosures |
 | `policy_field_mapper` | Directly maps collected data to policy gaps |
 | `export_gap_analyzer` | Compares data exports against actual collection |
